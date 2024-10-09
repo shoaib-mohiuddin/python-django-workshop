@@ -1,0 +1,9 @@
+<h1>Book List</h1>
+<a href="{% url 'book_create' %}">Add New Book</a>
+<ul>
+    {% for book in object_list %}
+        <li>
+     {{ book.title }}
+            ({{ book.author }})
+        </li>
+    {% endfor %}
